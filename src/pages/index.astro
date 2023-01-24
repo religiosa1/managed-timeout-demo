@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { ManagedTimeout } from '../components/ManagedTimeout';
+---
+
+<Layout title="Managed timeout demo">
+	<main>
+		<h1>Managed timeout demo</h1>
+		<p class="instructions">
+			This is a demo of the
+			<a href="https://github.com/religiosa1/managed-timeout">
+				managed-timeout
+			</a> package.
+
+			It enables you to create pausible, resumable, cancellable timeout with
+			introspection capabilities.
+
+			Bellow are exposed controls of the <code>Timeout</code> object and it's current data.
+
+			To get started, create a new timeout with specified delay and then
+			perform some operations on it.
+
+			Source code of this demo is available
+			<a href="https://github.com/religiosa1/managed-timeout-demo">here</a>
+		</p>
+		<Card>
+			<ManagedTimeout client:idle />
+		</Card>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		max-width: 120ch;
+	}
+	@media (min-width: 500) {
+		main {
+			padding: 1rem 1.5rem;
+		}
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+		text-align: center;
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+</style>

@@ -1,0 +1,21 @@
+@media (min-width: 500px) {
+	.field {
+		display: flex;
+		margin: 0.25rem 0;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.title {
+		min-width: 30ch;
+	}
+}
+
+.data::before {
+	content: "|";
+	margin-right: 1ch;
+}
+
+.data {
+	font-family: monospace;
+}

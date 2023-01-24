@@ -1,0 +1,15 @@
+.ManagedTimeout {
+	display: grid;
+	gap: 1rem;
+	margin: auto;
+	width: 100%;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+	.ManagedTimeout {
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+}

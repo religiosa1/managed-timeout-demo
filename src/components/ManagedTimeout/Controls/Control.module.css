@@ -1,0 +1,35 @@
+.control {
+	display: grid;
+	width: 100%;
+	gap: 0.25rem 0.5rem;
+	align-items: center;
+	margin: 0.75rem 0;
+	grid-template-areas:
+		"button"
+		"output"
+		"code"
+	;
+}
+
+@media (min-width: 500px) {
+	.control {
+		grid-template-areas:
+			"button output"
+			"code code"
+		;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.button {
+	grid-area: button;
+}
+
+.output {
+	grid-area: output;
+	font-family: monospace;
+}
+
+.code {
+	grid-area: code;
+}
