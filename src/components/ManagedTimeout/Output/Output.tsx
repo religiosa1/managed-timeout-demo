@@ -1,6 +1,6 @@
 import { createEffect, createSignal } from "solid-js";
 import type { Timeout } from "managed-timeout";
-import { getTimeoutData, TimeoutData } from "./TimeoutData";
+import { getTimeoutData, type TimeoutData } from "./TimeoutData";
 import { Field } from "./Field";
 
 interface OutputProps {

@@ -1,4 +1,4 @@
-import { JSXElement, children, splitProps, Show, ComponentProps } from "solid-js";
+import { type JSXElement, children, splitProps, Show, type ComponentProps } from "solid-js";
 import styles from "./Control.module.css";
 
 interface ControlProps extends Omit<ComponentProps<"button">, "name"> {
@@ -16,14 +16,14 @@ export function Control(props: ControlProps) {
 				type="button"
 				{...btnProps}
 			>
-				{children(() => props.name)}
+				{props.name}
 			</button>
 			<output class={styles.output}>
-				{children(() => props.children)}
+				{props.children}
 			</output>
 			<Show when={code}>
 				<code class={styles.code}>
-					{code}
+					{code()}
 				</code>
 			</Show>
 		</div>

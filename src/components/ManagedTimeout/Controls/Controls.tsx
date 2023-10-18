@@ -1,7 +1,7 @@
-import { createSignal, ComponentProps, Setter, batch } from "solid-js";
+import { createSignal, type ComponentProps, type Setter, batch } from "solid-js";
 import Timeout from "managed-timeout";
 import { Control as BaseControl } from "./Control"
-import { ActionControl, TimeoutActions } from "./ActionControl";
+import { ActionControl, type TimeoutActions } from "./ActionControl";
 
 interface ControlsProps {
 	timeout: Timeout | null;
